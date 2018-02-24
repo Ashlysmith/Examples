@@ -1,0 +1,39 @@
+/*Alice wrote a sequence of words in CamelCase as a string of letters, having the following properties:
+•	It is a concatenation of one or more words consisting of English letters.
+•	All letters in the first word are lowercase. 
+•	For each of the subsequent words, the first letter is uppercase and rest of the letters are lowercase.
+Given S , print the number of words in on a new line
+
+Input "saveChangesInTheEditor"
+
+output 5 */
+
+
+
+public class camelCase {
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int terms=	getCamelCaseTerms("saveChangesInTheEditor");
+	System.out.println(" The terms "+terms);
+	
+
+	}
+	
+	public static  int getCamelCaseTerms(String s){
+		int terms = 1;
+        for (int i = 0; i < s.length(); i++) {
+            String letter = Character.toString(s.charAt(i));
+            if (letter == letter.toUpperCase()) {
+                terms++;
+                }
+           }
+        
+        return terms;
+        //System.out.println(terms);
+      }
+		
+	
+}
+	
+
+	
